@@ -1,1 +1,119 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Our Story | Aditya & Ananya</title><link rel="stylesheet" href="style.css"></head><body><nav><div class="brand">ॐ शुभ विवाह</div><button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button><div class="links"><a href="index.html" class="">Home</a><a href="story.html" class="active">Our Story</a><a href="events.html" class="">Events</a><a href="gallery.html" class="">Gallery</a><a href="venue.html" class="">Venue & RSVP</a></div></nav><main class="page"><div class="container"><div class="kicker">A little about us</div><h1 class="title">Two Hearts, One Journey</h1><div class="grid2"><div class="photo"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85"></div><div class="copy"><p class="quote">“A beautiful beginning becomes even more special when two families come together.”</p><p>With immense joy and the blessings of our elders, we invite you to celebrate the wedding of <b>Aditya Yadav</b> and <b>Ananya Yadav</b>.</p><p>Come share our happiness, laughter, rituals and the memories that begin with this auspicious celebration.</p><a class="btn primary" href="events.html">View Wedding Events →</a></div></div></div></main><footer><div class="dev">ॐ सर्वे भवन्तु सुखिनः</div><h2>Aditya & Ananya</h2><small>Yadav Family · शुभ विवाह</small></footer><div class="modal" id="modal" onclick="closeModal()"><div class="modalbox" onclick="event.stopPropagation()"><button class="close" onclick="closeModal()">×</button><img id="modalImg"></div></div><script>function closeModal(){document.getElementById("modal").classList.remove("open")}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Story | Aditya & Ananya</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">ॐ शुभ विवाह</div>
+
+  <button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+
+  <div class="links">
+    <a href="index.html">Home / मुख्य पृष्ठ</a>
+    <a href="story.html" class="active">Our Story / हमारी कहानी</a>
+    <a href="events.html">Events / कार्यक्रम</a>
+    <a href="gallery.html">Gallery / तस्वीरें</a>
+    <a href="venue.html">Venue & RSVP / स्थान एवं आमंत्रण</a>
+  </div>
+</nav>
+
+<main class="page">
+
+  <div class="container">
+
+    <div class="kicker">
+      A little about us
+      <br>
+      <span class="dev">हमारे बारे में</span>
+    </div>
+
+    <h1 class="title">
+      Two Hearts, One Journey
+      <br>
+      <span class="dev">दो दिल, एक सफ़र</span>
+    </h1>
+
+    <div class="grid2">
+
+      <div class="photo">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85">
+      </div>
+
+      <div class="copy">
+
+        <p class="quote">
+          “A beautiful beginning becomes even more special when two families come together.”
+          <br><br>
+          <span class="dev">
+            “एक खूबसूरत शुरुआत तब और भी खास हो जाती है,
+            जब दो परिवार एक साथ जुड़ते हैं।”
+          </span>
+        </p>
+
+        <p>
+          With immense joy and the blessings of our elders, we invite you to celebrate the wedding of
+          <b>Aditya Yadav</b> and <b>Ananya Yadav</b>.
+        </p>
+
+        <p class="dev">
+          अपने बड़ों के आशीर्वाद और अपार खुशी के साथ,
+          हम आपको <b>आदित्य यादव</b> एवं <b>अनन्या यादव</b>
+          के शुभ विवाह समारोह में सादर आमंत्रित करते हैं।
+        </p>
+
+        <p>
+          Come share our happiness, laughter, rituals and the memories that begin with this auspicious celebration.
+        </p>
+
+        <p class="dev">
+          आइए, इस शुभ अवसर पर हमारी खुशियों,
+          हंसी-खुशी, विवाह की रस्मों और नई यादों का हिस्सा बनें।
+        </p>
+
+        <a class="btn primary" href="events.html">
+          View Wedding Events / विवाह कार्यक्रम →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <div class="dev">ॐ सर्वे भवन्तु सुखिनः</div>
+
+  <h2>Aditya & Ananya</h2>
+
+  <small>
+    Yadav Family · यादव परिवार · शुभ विवाह
+  </small>
+
+</footer>
+
+<div class="modal" id="modal" onclick="closeModal()">
+
+  <div class="modalbox" onclick="event.stopPropagation()">
+    <button class="close" onclick="closeModal()">×</button>
+    <img id="modalImg">
+  </div>
+
+</div>
+
+<script>
+function closeModal(){
+  document.getElementById("modal").classList.remove("open");
+}
+</script>
+
+</body>
+</html>
