@@ -1,13 +1,352 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap");
-:root{--maroon:#74182c;--deep:#470f1e;--gold:#c89b55;--saffron:#c87325;--cream:#fff8eb;--ink:#321c20}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Cormorant Garamond",serif}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:radial-gradient(#c89b55 1px,transparent 1px);background-size:28px 28px;z-index:-1}
-nav{position:sticky;top:0;z-index:20;background:rgba(71,15,30,.98);padding:12px 6%;display:flex;align-items:center;justify-content:space-between;color:#fff;box-shadow:0 4px 18px #0003}.brand{font-family:"Noto Serif Devanagari";font-size:18px}.links{display:flex;gap:20px}.links a{color:#fff;text-decoration:none}.links a.active,.links a:hover{color:#edca7e}.menu{display:none;background:none;border:0;color:white;font-size:25px}
-.page{min-height:calc(100vh - 60px);padding:70px 7%;display:flex;align-items:center;justify-content:center}.container{width:100%;max-width:1120px;text-align:center}.kicker{color:var(--saffron);letter-spacing:4px;text-transform:uppercase}.title{font-size:clamp(45px,6vw,70px);color:var(--maroon);margin:8px 0 20px}.sub{font-size:21px;line-height:1.5;max-width:700px;margin:0 auto 30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:30px;border:1px solid var(--gold);text-decoration:none;font-weight:600;font-size:17px;margin:5px;cursor:pointer;font-family:inherit}.primary{background:var(--saffron);color:#fff}.outline{color:var(--maroon);background:#fff}
-.hero{min-height:calc(100vh - 60px);background:linear-gradient(#470f1ec7,#470f1eab),url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85") center/cover;color:#fff}.hero .title{color:#fff;font-size:clamp(58px,10vw,110px);line-height:.9}.om{font-size:48px;color:#e6c278}.dev{font-family:"Noto Serif Devanagari"}.date{font-size:24px;letter-spacing:3px}.orn{width:230px;height:1px;background:#e3bc6b;margin:25px auto}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.photo{border:9px solid white;box-shadow:0 12px 35px #4b102033}.photo img{display:block;width:100%;height:500px;object-fit:cover}.copy{text-align:left;font-size:20px;line-height:1.55}.quote{border-left:3px solid var(--gold);padding-left:18px;font-style:italic}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid #ead6b1;border-radius:20px;padding:25px 16px;box-shadow:0 8px 25px #4b10200d}.icon{font-size:40px}.card h3{font-size:29px;color:var(--maroon);margin:8px}.tag{display:inline-block;background:#f5e4cb;color:var(--maroon);border-radius:20px;padding:4px 10px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.gallery img{width:100%;height:250px;object-fit:cover;border-radius:14px;cursor:pointer}.video{margin:30px auto 0;max-width:780px;height:280px;border-radius:20px;background:url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85") center/cover;display:flex;align-items:center;justify-content:center;position:relative}.play{border:0;border-radius:50%;width:80px;height:80px;background:#fffd;color:var(--maroon);font-size:28px;cursor:pointer}.video span{position:absolute;bottom:18px;left:20px;color:#fff;font-size:20px;text-shadow:0 2px 5px #000}
-.venuegrid{display:grid;grid-template-columns:1fr 1.2fr;gap:25px}.venuecard{background:#fff;padding:30px;border-radius:20px;text-align:left}.venuecard h3{color:var(--maroon);font-size:35px}.map{width:100%;height:390px;border:0;border-radius:20px}
-.rsvp{max-width:650px;margin:auto;background:#fff;padding:35px;border-radius:22px;box-shadow:0 10px 30px #4b10201a}.rsvp input,.rsvp textarea,.rsvp select{width:100%;padding:13px;margin:7px 0 12px;border:1px solid #dcc69d;border-radius:10px;font-family:inherit;font-size:17px}.rsvp label{text-align:left;display:block;color:var(--maroon)}
-footer{background:var(--deep);color:#fff;text-align:center;padding:30px}.modal{display:none;position:fixed;inset:0;background:#000b;z-index:50;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modalbox{background:#fff;border-radius:15px;padding:10px;max-width:850px;width:100%;position:relative}.modalbox img{width:100%;max-height:75vh;object-fit:contain}.close{position:absolute;right:-10px;top:-10px;border:0;border-radius:50%;background:var(--maroon);color:#fff;width:38px;height:38px;font-size:22px}
-@media(max-width:800px){.links{display:none;position:absolute;top:58px;left:0;right:0;background:var(--deep);padding:20px;flex-direction:column;text-align:center}.links.open{display:flex}.menu{display:block}.page{padding:55px 20px}.grid2,.venuegrid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.photo img{height:360px}.copy{text-align:center}}@media(max-width:520px){.cards,.gallery{grid-template-columns:1fr}.hero .title{font-size:60px}.date{font-size:19px}}
+
+:root{
+  --maroon:#74182c;
+  --deep:#470f1e;
+  --gold:#c89b55;
+  --saffron:#c87325;
+  --cream:#fff8eb;
+  --ink:#321c20
+}
+
+*{
+  box-sizing:border-box
+}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"Cormorant Garamond",serif
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.13;
+  background-image:radial-gradient(#c89b55 1px,transparent 1px);
+  background-size:28px 28px;
+  z-index:-1
+}
+
+/* Navigation */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(71,15,30,.98);
+  padding:12px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#fff;
+  box-shadow:0 4px 18px #0003
+}
+
+.brand{
+  font-family:"Noto Serif Devanagari";
+  font-size:18px
+}
+
+.links{
+  display:flex;
+  gap:20px
+}
+
+.links a{
+  color:#fff;
+  text-decoration:none
+}
+
+.links a.active,
+.links a:hover{
+  color:#edca7e
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:0;
+  color:white;
+  font-size:25px
+}
+
+/* Language switch */
+
+.language{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-left:15px;
+  white-space:nowrap
+}
+
+.language button{
+  background:none;
+  border:none;
+  color:inherit;
+  font-family:inherit;
+  font-size:14px;
+  cursor:pointer;
+  padding:4px 2px
+}
+
+.language button:hover{
+  color:#edca7e;
+  text-decoration:underline
+}
+
+.language span{
+  opacity:.6
+}
+
+/* Pages */
+
+.page{
+  min-height:calc(100vh - 60px);
+  padding:70px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+.container{
+  width:100%;
+  max-width:1120px;
+  text-align:center
+}
+
+.kicker{
+  color:var(--saffron);
+  letter-spacing:4px;
+  text-transform:uppercase
+}
+
+.title{
+  font-size:clamp(45px,6vw,70px);
+  color:var(--maroon);
+  margin:8px 0 20px
+}
+
+.sub{
+  font-size:21px;
+  line-height:1.5;
+  max-width:700px;
+  margin:0 auto 30px
+}
+
+/* Buttons */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 22px;
+  border-radius:30px;
+  border:1px solid var(--gold);
+  text-decoration:none;
+  font-weight:600;
+  font-size:17px;
+  margin:5px;
+  cursor:pointer;
+  font-family:inherit
+}
+
+.primary{
+  background:var(--saffron);
+  color:#fff
+}
+
+.outline{
+  color:var(--maroon);
+  background:#fff
+}
+
+/* Hero */
+
+.hero{
+  min-height:calc(100vh - 60px);
+  background:
+    linear-gradient(#470f1ec7,#470f1eab),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color:#fff
+}
+
+.hero .title{
+  color:#fff;
+  font-size:clamp(58px,10vw,110px);
+  line-height:.9
+}
+
+.om{
+  font-size:48px;
+  color:#e6c278
+}
+
+.dev{
+  font-family:"Noto Serif Devanagari"
+}
+
+.date{
+  font-size:24px;
+  letter-spacing:3px
+}
+
+.orn{
+  width:230px;
+  height:1px;
+  background:#e3bc6b;
+  margin:25px auto
+}
+
+/* Story */
+
+.grid2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center
+}
+
+.photo{
+  border:9px solid white;
+  box-shadow:0 12px 35px #4b102033
+}
+
+.photo img{
+  display:block;
+  width:100%;
+  height:500px;
+  object-fit:cover
+}
+
+.copy{
+  text-align:left;
+  font-size:20px;
+  line-height:1.55
+}
+
+.quote{
+  border-left:3px solid var(--gold);
+  padding-left:18px;
+  font-style:italic
+}
+
+/* Event cards */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px
+}
+
+.card{
+  background:#fff;
+  border:1px solid #ead6b1;
+  border-radius:20px;
+  padding:25px 16px;
+  box-shadow:0 8px 25px #4b10200d
+}
+
+.icon{
+  font-size:40px
+}
+
+.card h3{
+  font-size:29px;
+  color:var(--maroon);
+  margin:8px
+}
+
+.tag{
+  display:inline-block;
+  background:#f5e4cb;
+  color:var(--maroon);
+  border-radius:20px;
+  padding:4px 10px
+}
+
+/* Gallery */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px
+}
+
+.gallery img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:14px;
+  cursor:pointer
+}
+
+/* Video */
+
+.video{
+  margin:30px auto 0;
+  max-width:780px;
+  height:280px;
+  border-radius:20px;
+  background:
+    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative
+}
+
+.play{
+  border:0;
+  border-radius:50%;
+  width:80px;
+  height:80px;
+  background:#fffd;
+  color:var(--maroon);
+  font-size:28px;
+  cursor:pointer
+}
+
+.video span{
+  position:absolute;
+  bottom:18px;
+  left:20px;
+  color:#fff;
+  font-size:20px;
+  text-shadow:0 2px 5px #000
+}
+
+/* Venue */
+
+.venuegrid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:25px
+}
+
+.venuecard{
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  text-align:left
+}
+
+.venuecard h3{
+  color:var(--maroon);
+  font-size:35px
+}
+
+.map{
+  width:100%;
+  height:390px;
+  border:0;
+  border-radius:20px
+}
+
+/
