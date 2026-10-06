@@ -1,1 +1,163 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gallery | Aditya & Ananya</title><link rel="stylesheet" href="style.css"></head><body><nav><div class="brand">ॐ शुभ विवाह</div><button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button><div class="links"><a href="index.html" class="">Home</a><a href="story.html" class="">Our Story</a><a href="events.html" class="">Events</a><a href="gallery.html" class="active">Gallery</a><a href="venue.html" class="">Venue & RSVP</a></div></nav><main class="page"><div class="container"><div class="kicker">Captured memories</div><h1 class="title">Gallery & Video</h1><p class="sub">A few sample moments from our journey.</p><div class="gallery"><img onclick="openImg(this.src)" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"><img onclick="openImg(this.src)" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"><img onclick="openImg(this.src)" src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=900&q=85"><img onclick="openImg(this.src)" src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=85"><img onclick="openImg(this.src)" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85"><img onclick="openImg(this.src)" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85"></div><div class="video"><button class="play" onclick="alert('Replace this sample video with your wedding MP4 or YouTube link.')">▶</button><span>Our Wedding Story · Watch Video</span></div><div style="margin-top:25px"><a class="btn primary" href="venue.html">Venue & RSVP →</a></div></div></main><footer><div class="dev">ॐ सर्वे भवन्तु सुखिनः</div><h2>Aditya & Ananya</h2><small>Yadav Family · शुभ विवाह</small></footer><div class="modal" id="modal" onclick="closeModal()"><div class="modalbox" onclick="event.stopPropagation()"><button class="close" onclick="closeModal()">×</button><img id="modalImg"></div></div><script>function openImg(s){document.getElementById("modalImg").src=s;document.getElementById("modal").classList.add("open")}function closeModal(){document.getElementById("modal").classList.remove("open")}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gallery | Aditya & Ananya</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">ॐ शुभ विवाह</div>
+
+  <button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+
+  <div class="links">
+    <a href="index.html" data-en="Home" data-hi="मुख्य पृष्ठ">Home</a>
+    <a href="story.html" data-en="Our Story" data-hi="हमारी कहानी">Our Story</a>
+    <a href="events.html" data-en="Events" data-hi="कार्यक्रम">Events</a>
+    <a href="gallery.html" class="active" data-en="Gallery" data-hi="तस्वीरें">Gallery</a>
+    <a href="venue.html" data-en="Venue & RSVP" data-hi="स्थान एवं आमंत्रण">Venue & RSVP</a>
+  </div>
+
+  <div class="language">
+    <button onclick="setLanguage('en')">English</button>
+    <span>|</span>
+    <button onclick="setLanguage('hi')">हिंदी</button>
+  </div>
+</nav>
+
+<main class="page">
+
+  <div class="container">
+
+    <div class="kicker"
+         data-en="Our memories"
+         data-hi="हमारी यादें">
+      Our memories
+    </div>
+
+    <h1 class="title"
+        data-en="Wedding Gallery"
+        data-hi="विवाह तस्वीरें">
+      Wedding Gallery
+    </h1>
+
+    <p class="sub"
+       data-en="A glimpse of the beautiful moments we are celebrating together."
+       data-hi="उन खूबसूरत पलों की एक झलक, जिन्हें हम साथ मिलकर मना रहे हैं।">
+      A glimpse of the beautiful moments we are celebrating together.
+    </p>
+
+    <div class="gallery">
+
+      <img
+        src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85"
+        alt="Wedding celebration">
+
+      <img
+        src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
+        alt="Wedding couple">
+
+      <img
+        src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85"
+        alt="Wedding celebration">
+
+    </div>
+
+    <div class="video">
+
+      <button class="play" onclick="playWeddingVideo()">▶</button>
+
+      <span
+        data-en="Our Wedding Video"
+        data-hi="हमारा विवाह वीडियो">
+        Our Wedding Video
+      </span>
+
+    </div>
+
+    <p
+      style="margin-top:20px"
+      data-en="Your wedding video will appear here."
+      data-hi="आपका विवाह वीडियो यहां दिखाई देगा।">
+      Your wedding video will appear here.
+    </p>
+
+    <div style="margin-top:25px">
+
+      <a
+        class="btn primary"
+        href="venue.html"
+        data-en="View Venue & RSVP →"
+        data-hi="स्थान एवं आमंत्रण देखें →">
+        View Venue & RSVP →
+      </a>
+
+      <a
+        class="btn outline"
+        href="events.html"
+        data-en="View Events →"
+        data-hi="कार्यक्रम देखें →">
+        View Events →
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <div class="dev">ॐ सर्वे भवन्तु सुखिनः</div>
+
+  <h2>Aditya & Ananya</h2>
+
+  <small
+    data-en="Yadav Family · शुभ विवाह"
+    data-hi="यादव परिवार · शुभ विवाह">
+    Yadav Family · शुभ विवाह
+  </small>
+
+</footer>
+
+<script>
+
+function setLanguage(lang){
+
+  document.querySelectorAll("[data-en]").forEach(function(element){
+
+    element.textContent =
+      lang === "hi"
+      ? element.getAttribute("data-hi")
+      : element.getAttribute("data-en");
+
+  });
+
+  localStorage.setItem("weddingLanguage", lang);
+}
+
+function loadLanguage(){
+
+  const lang = localStorage.getItem("weddingLanguage") || "en";
+
+  setLanguage(lang);
+}
+
+function playWeddingVideo(){
+
+  alert(
+    "Wedding video will be connected after the video file is uploaded to the GitHub repository."
+  );
+
+}
+
+loadLanguage();
+
+</script>
+
+</body>
+</html>
