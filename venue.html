@@ -1,1 +1,273 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Venue & RSVP | Aditya & Ananya</title><link rel="stylesheet" href="style.css"></head><body><nav><div class="brand">ॐ शुभ विवाह</div><button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button><div class="links"><a href="index.html" class="">Home</a><a href="story.html" class="">Our Story</a><a href="events.html" class="">Events</a><a href="gallery.html" class="">Gallery</a><a href="venue.html" class="active">Venue & RSVP</a></div></nav><main class="page"><div class="container"><div class="kicker">Join us</div><h1 class="title">Venue & RSVP</h1><div class="venuegrid"><div class="venuecard"><h3>Shagun Banquet</h3><p><b>18 December 2026 · 7:00 PM</b></p><p>Sample Road, Ghaziabad, Uttar Pradesh</p><p>We would be honoured to have your blessings and presence.</p><a class="btn primary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Ghaziabad%20Uttar%20Pradesh">📍 Get Directions</a><a class="btn outline" target="_blank" href="https://wa.me/?text=I%20would%20love%20to%20attend%20Aditya%20and%20Ananya%20Yadav%27s%20wedding.">💌 WhatsApp RSVP</a></div><iframe class="map" loading="lazy" src="https://www.google.com/maps?q=Ghaziabad%2C%20Uttar%20Pradesh&output=embed"></iframe></div><div class="rsvp" style="margin-top:35px"><h2 class="title" style="font-size:45px">Kindly RSVP</h2><form onsubmit="sendRSVP(event)"><label>Name</label><input id="name" required placeholder="Your name"><label>Will you attend?</label><select id="attend"><option>Yes, with pleasure</option><option>Sorry, unable to attend</option></select><label>Message</label><textarea id="msg" rows="3" placeholder="A message for the couple"></textarea><button class="btn primary" type="submit">Send RSVP on WhatsApp</button></form></div></div></main><footer><div class="dev">ॐ सर्वे भवन्तु सुखिनः</div><h2>Aditya & Ananya</h2><small>Yadav Family · शुभ विवाह</small></footer><div class="modal" id="modal" onclick="closeModal()"><div class="modalbox" onclick="event.stopPropagation()"><button class="close" onclick="closeModal()">×</button><img id="modalImg"></div></div><script>function sendRSVP(e){e.preventDefault();let n=document.getElementById("name").value,a=document.getElementById("attend").value,m=document.getElementById("msg").value;let t="RSVP for Aditya & Ananya Wedding%0AName: "+encodeURIComponent(n)+"%0AAttendance: "+encodeURIComponent(a)+"%0AMessage: "+encodeURIComponent(m);open("https://wa.me/?text="+t,"_blank")}function closeModal(){document.getElementById("modal").classList.remove("open")}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Venue & RSVP | Aditya & Ananya</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">ॐ शुभ विवाह</div>
+
+  <button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+
+  <div class="links">
+    <a href="index.html" data-en="Home" data-hi="मुख्य पृष्ठ">Home</a>
+    <a href="story.html" data-en="Our Story" data-hi="हमारी कहानी">Our Story</a>
+    <a href="events.html" data-en="Events" data-hi="कार्यक्रम">Events</a>
+    <a href="gallery.html" data-en="Gallery" data-hi="तस्वीरें">Gallery</a>
+    <a href="venue.html" class="active" data-en="Venue & RSVP" data-hi="स्थान एवं आमंत्रण">Venue & RSVP</a>
+  </div>
+
+  <div class="language">
+    <button onclick="setLanguage('en')">English</button>
+    <span>|</span>
+    <button onclick="setLanguage('hi')">हिंदी</button>
+  </div>
+</nav>
+
+<main class="page">
+
+  <div class="container">
+
+    <div class="kicker"
+         data-en="Join us"
+         data-hi="हमारे साथ जुड़ें">
+      Join us
+    </div>
+
+    <h1 class="title"
+        data-en="Venue & RSVP"
+        data-hi="स्थान एवं आमंत्रण">
+      Venue & RSVP
+    </h1>
+
+    <p class="sub"
+       data-en="We would be delighted to celebrate this special day with you."
+       data-hi="हमें आपके साथ इस विशेष दिन को मनाकर बहुत खुशी होगी।">
+      We would be delighted to celebrate this special day with you.
+    </p>
+
+    <div class="venuegrid">
+
+      <div class="venuecard">
+
+        <h3
+          data-en="Wedding Venue"
+          data-hi="विवाह स्थल">
+          Wedding Venue
+        </h3>
+
+        <p>
+          <strong
+            data-en="Shagun Banquet"
+            data-hi="शगुन बैंक्वेट">
+            Shagun Banquet
+          </strong>
+        </p>
+
+        <p
+          data-en="Ghaziabad, Uttar Pradesh"
+          data-hi="गाज़ियाबाद, उत्तर प्रदेश">
+          Ghaziabad, Uttar Pradesh
+        </p>
+
+        <p
+          data-en="18 December 2026"
+          data-hi="18 दिसंबर 2026">
+          18 December 2026
+        </p>
+
+        <p
+          data-en="Wedding ceremony and celebrations"
+          data-hi="विवाह समारोह एवं उत्सव">
+          Wedding ceremony and celebrations
+        </p>
+
+        <a
+          class="btn primary"
+          href="https://www.google.com/maps/search/?api=1&query=Shagun+Banquet+Ghaziabad"
+          target="_blank"
+          rel="noopener"
+          data-en="📍 Get Directions"
+          data-hi="📍 रास्ता देखें">
+          📍 Get Directions
+        </a>
+
+        <a
+          class="btn outline"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Aditya%20%26%20Ananya%20Wedding&dates=20261218T190000/20261218T230000&location=Shagun%20Banquet%2C%20Ghaziabad"
+          target="_blank"
+          rel="noopener"
+          data-en="📅 Save the Date"
+          data-hi="📅 तारीख सुरक्षित करें">
+          📅 Save the Date
+        </a>
+
+      </div>
+
+      <iframe
+        class="map"
+        src="https://www.google.com/maps?q=Shagun+Banquet+Ghaziabad&output=embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+    <div style="margin-top:40px">
+
+      <div class="rsvp">
+
+        <h2
+          style="color:var(--maroon);font-size:35px"
+          data-en="RSVP"
+          data-hi="उपस्थिति की पुष्टि">
+          RSVP
+        </h2>
+
+        <p
+          data-en="Please let us know if you will be joining us."
+          data-hi="कृपया हमें बताएं कि आप हमारे साथ शामिल होंगे या नहीं।">
+          Please let us know if you will be joining us.
+        </p>
+
+        <form onsubmit="submitRSVP(event)">
+
+          <label
+            data-en="Your Name"
+            data-hi="आपका नाम">
+            Your Name
+          </label>
+
+          <input
+            type="text"
+            id="guestName"
+            required
+            placeholder="Your Name">
+
+          <label
+            data-en="Will you attend?"
+            data-hi="क्या आप शामिल होंगे?">
+            Will you attend?
+          </label>
+
+          <select id="attendance" required>
+
+            <option value=""
+                    data-en="Please select"
+                    data-hi="कृपया चुनें">
+              Please select
+            </option>
+
+            <option value="yes"
+                    data-en="Yes, I will be there"
+                    data-hi="हाँ, मैं अवश्य आऊँगा/आऊँगी">
+              Yes, I will be there
+            </option>
+
+            <option value="no"
+                    data-en="Sorry, I cannot attend"
+                    data-hi="क्षमा करें, मैं शामिल नहीं हो पाऊँगा/पाऊँगी">
+              Sorry, I cannot attend
+            </option>
+
+          </select>
+
+          <label
+            data-en="Message"
+            data-hi="संदेश">
+            Message
+          </label>
+
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Your message"></textarea>
+
+          <button
+            type="submit"
+            class="btn primary"
+            data-en="Send RSVP"
+            data-hi="RSVP भेजें">
+            Send RSVP
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <div class="dev">ॐ सर्वे भवन्तु सुखिनः</div>
+
+  <h2>Aditya & Ananya</h2>
+
+  <small
+    data-en="Yadav Family · शुभ विवाह"
+    data-hi="यादव परिवार · शुभ विवाह">
+    Yadav Family · शुभ विवाह
+  </small>
+
+</footer>
+
+<script>
+
+function setLanguage(lang){
+
+  document.querySelectorAll("[data-en]").forEach(function(element){
+
+    element.textContent =
+      lang === "hi"
+      ? element.getAttribute("data-hi")
+      : element.getAttribute("data-en");
+
+  });
+
+  localStorage.setItem("weddingLanguage", lang);
+}
+
+function loadLanguage(){
+
+  const lang = localStorage.getItem("weddingLanguage") || "en";
+
+  setLanguage(lang);
+}
+
+function submitRSVP(event){
+
+  event.preventDefault();
+
+  const name = document.getElementById("guestName").value;
+  const attendance = document.getElementById("attendance").value;
+  const message = document.getElementById("message").value;
+
+  const subject = encodeURIComponent(
+    "Wedding RSVP - " + name
+  );
+
+  const body = encodeURIComponent(
+    "Name: " + name +
+    "\nAttendance: " + attendance +
+    "\nMessage: " + message
+  );
+
+  window.location.href =
+    "mailto:?subject=" + subject + "&body=" + body;
+}
+
+loadLanguage();
+
+</script>
+
+</body>
+</html>
