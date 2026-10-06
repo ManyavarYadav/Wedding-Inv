@@ -67,24 +67,37 @@
 
     </div>
 
-    <div class="video">
+    <div style="margin-top:35px">
 
-      <button class="play" onclick="playWeddingVideo()">▶</button>
-
-      <span
+      <h2
+        style="color:var(--maroon);font-size:35px"
         data-en="Our Wedding Video"
         data-hi="हमारा विवाह वीडियो">
         Our Wedding Video
-      </span>
+      </h2>
+
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        style="width:100%;max-width:780px;border-radius:20px;box-shadow:0 10px 30px #4b102033;background:#000">
+
+        <source
+          src="YTDown.com_YouTube_Media_WNUUVGwVido_Manmohak-Pal-Shaadi-ka-nimantran-shortsvideo-invitationcard-ytshorts_002_720p.mp4"
+          type="video/mp4">
+
+        Your browser does not support the video tag.
+
+      </video>
+
+      <p
+        style="margin-top:15px"
+        data-en="Tap the play button to watch our wedding invitation video."
+        data-hi="हमारा विवाह निमंत्रण वीडियो देखने के लिए प्ले बटन दबाएं।">
+        Tap the play button to watch our wedding invitation video.
+      </p>
 
     </div>
-
-    <p
-      style="margin-top:20px"
-      data-en="Your wedding video will appear here."
-      data-hi="आपका विवाह वीडियो यहां दिखाई देगा।">
-      Your wedding video will appear here.
-    </p>
 
     <div style="margin-top:25px">
 
@@ -145,14 +158,6 @@ function loadLanguage(){
   const lang = localStorage.getItem("weddingLanguage") || "en";
 
   setLanguage(lang);
-}
-
-function playWeddingVideo(){
-
-  alert(
-    "Wedding video will be connected after the video file is uploaded to the GitHub repository."
-  );
-
 }
 
 loadLanguage();
