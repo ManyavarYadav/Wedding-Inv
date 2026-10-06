@@ -1,1 +1,200 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wedding Events | Aditya & Ananya</title><link rel="stylesheet" href="style.css"></head><body><nav><div class="brand">ॐ शुभ विवाह</div><button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button><div class="links"><a href="index.html" class="">Home</a><a href="story.html" class="">Our Story</a><a href="events.html" class="active">Events</a><a href="gallery.html" class="">Gallery</a><a href="venue.html" class="">Venue & RSVP</a></div></nav><main class="page"><div class="container"><div class="kicker">The celebrations</div><h1 class="title">Wedding Events</h1><p class="sub">Three days of traditions, music, blessings and celebration.</p><div class="cards"><div class="card"><div class="icon">🌼</div><span class="tag">16 DEC</span><h3>Haldi</h3><p>11:00 AM</p><p>Yadav Family Home</p></div><div class="card"><div class="icon">🎶</div><span class="tag">17 DEC</span><h3>Sangeet</h3><p>7:00 PM</p><p>Grand Celebration Lawn</p></div><div class="card"><div class="icon">🪔</div><span class="tag">18 DEC</span><h3>Wedding</h3><p>7:00 PM</p><p>Shagun Banquet, Ghaziabad</p></div><div class="card"><div class="icon">🌹</div><span class="tag">19 DEC</span><h3>Reception</h3><p>7:30 PM</p><p>Shagun Banquet, Ghaziabad</p></div></div><div style="margin-top:30px"><a class="btn primary" href="gallery.html">See Our Memories →</a></div></div></main><footer><div class="dev">ॐ सर्वे भवन्तु सुखिनः</div><h2>Aditya & Ananya</h2><small>Yadav Family · शुभ विवाह</small></footer><div class="modal" id="modal" onclick="closeModal()"><div class="modalbox" onclick="event.stopPropagation()"><button class="close" onclick="closeModal()">×</button><img id="modalImg"></div></div><script>function closeModal(){document.getElementById("modal").classList.remove("open")}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wedding Events | Aditya & Ananya</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">ॐ शुभ विवाह</div>
+
+  <button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+
+  <div class="links">
+    <a href="index.html" data-en="Home" data-hi="मुख्य पृष्ठ">Home</a>
+    <a href="story.html" data-en="Our Story" data-hi="हमारी कहानी">Our Story</a>
+    <a href="events.html" class="active" data-en="Events" data-hi="कार्यक्रम">Events</a>
+    <a href="gallery.html" data-en="Gallery" data-hi="तस्वीरें">Gallery</a>
+    <a href="venue.html" data-en="Venue & RSVP" data-hi="स्थान एवं आमंत्रण">Venue & RSVP</a>
+  </div>
+
+  <div class="language">
+    <button onclick="setLanguage('en')">English</button>
+    <span>|</span>
+    <button onclick="setLanguage('hi')">हिंदी</button>
+  </div>
+</nav>
+
+<main class="page">
+
+  <div class="container">
+
+    <div class="kicker"
+         data-en="Save the dates"
+         data-hi="तिथियां सुरक्षित रखें">
+      Save the dates
+    </div>
+
+    <h1 class="title"
+        data-en="Wedding Celebrations"
+        data-hi="विवाह समारोह">
+      Wedding Celebrations
+    </h1>
+
+    <p class="sub"
+       data-en="Join us as we celebrate love, family and the beginning of a beautiful new journey."
+       data-hi="हमारे साथ प्रेम, परिवार और एक खूबसूरत नई शुरुआत का उत्सव मनाएं।">
+      Join us as we celebrate love, family and the beginning of a beautiful new journey.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🪔</div>
+
+        <h3 data-en="Haldi"
+            data-hi="हल्दी">
+          Haldi
+        </h3>
+
+        <div class="tag"
+             data-en="17 December 2026"
+             data-hi="17 दिसंबर 2026">
+          17 December 2026
+        </div>
+
+        <p data-en="A joyful ceremony filled with blessings, laughter and the warmth of our families."
+           data-hi="आशीर्वाद, हंसी-खुशी और परिवार के प्यार से भरी एक आनंदमय रस्म।">
+          A joyful ceremony filled with blessings, laughter and the warmth of our families.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💃</div>
+
+        <h3 data-en="Mehndi"
+            data-hi="मेहंदी">
+          Mehndi
+        </h3>
+
+        <div class="tag"
+             data-en="17 December 2026"
+             data-hi="17 दिसंबर 2026">
+          17 December 2026
+        </div>
+
+        <p data-en="An evening of beautiful mehndi, music, dance and cherished memories."
+           data-hi="सुंदर मेहंदी, संगीत, नृत्य और यादगार पलों से सजी एक खूबसूरत शाम।">
+          An evening of beautiful mehndi, music, dance and cherished memories.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎶</div>
+
+        <h3 data-en="Sangeet"
+            data-hi="संगीत">
+          Sangeet
+        </h3>
+
+        <div class="tag"
+             data-en="17 December 2026"
+             data-hi="17 दिसंबर 2026">
+          17 December 2026
+        </div>
+
+        <p data-en="Come celebrate with music, performances, dance and lots of happiness."
+           data-hi="संगीत, प्रस्तुतियों, नृत्य और ढेर सारी खुशियों के साथ हमारे साथ जश्न मनाएं।">
+          Come celebrate with music, performances, dance and lots of happiness.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💍</div>
+
+        <h3 data-en="Wedding"
+            data-hi="विवाह">
+          Wedding
+        </h3>
+
+        <div class="tag"
+             data-en="18 December 2026"
+             data-hi="18 दिसंबर 2026">
+          18 December 2026
+        </div>
+
+        <p data-en="The auspicious day when Aditya and Ananya begin their journey together."
+           data-hi="वह शुभ दिन जब आदित्य और अनन्या अपने जीवन की नई यात्रा साथ शुरू करेंगे।">
+          The auspicious day when Aditya and Ananya begin their journey together.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="margin-top:35px">
+
+      <a class="btn primary"
+         href="venue.html"
+         data-en="View Venue & RSVP →"
+         data-hi="स्थान एवं आमंत्रण देखें →">
+        View Venue & RSVP →
+      </a>
+
+      <a class="btn outline"
+         href="gallery.html"
+         data-en="View Gallery →"
+         data-hi="तस्वीरें देखें →">
+        View Gallery →
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="dev">ॐ सर्वे भवन्तु सुखिनः</div>
+
+  <h2>Aditya & Ananya</h2>
+
+  <small
+    data-en="Yadav Family · शुभ विवाह"
+    data-hi="यादव परिवार · शुभ विवाह">
+    Yadav Family · शुभ विवाह
+  </small>
+</footer>
+
+<script>
+
+function setLanguage(lang){
+
+  document.querySelectorAll("[data-en]").forEach(function(element){
+
+    element.textContent =
+      lang === "hi"
+      ? element.getAttribute("data-hi")
+      : element.getAttribute("data-en");
+
+  });
+
+  localStorage.setItem("weddingLanguage", lang);
+}
+
+function loadLanguage(){
+
+  const lang = localStorage.getItem("weddingLanguage") || "en";
+
+  setLanguage(lang);
+}
+
+loadLanguage();
+
+</script>
+
+</body>
+</html>
