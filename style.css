@@ -6,18 +6,23 @@
   --gold:#c89b55;
   --saffron:#c87325;
   --cream:#fff8eb;
-  --ink:#321c20
+  --ink:#321c20;
 }
 
 *{
-  box-sizing:border-box
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
   margin:0;
   background:var(--cream);
   color:var(--ink);
-  font-family:"Cormorant Garamond",serif
+  font-family:"Cormorant Garamond",serif;
+  overflow-x:hidden;
 }
 
 body:before{
@@ -28,10 +33,12 @@ body:before{
   opacity:.13;
   background-image:radial-gradient(#c89b55 1px,transparent 1px);
   background-size:28px 28px;
-  z-index:-1
+  z-index:-1;
 }
 
-/* Navigation */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
   position:sticky;
@@ -43,27 +50,29 @@ nav{
   align-items:center;
   justify-content:space-between;
   color:#fff;
-  box-shadow:0 4px 18px #0003
+  box-shadow:0 4px 18px #0003;
 }
 
 .brand{
   font-family:"Noto Serif Devanagari";
-  font-size:18px
+  font-size:18px;
+  white-space:nowrap;
 }
 
 .links{
   display:flex;
-  gap:20px
+  gap:20px;
 }
 
 .links a{
   color:#fff;
-  text-decoration:none
+  text-decoration:none;
+  white-space:nowrap;
 }
 
 .links a.active,
 .links a:hover{
-  color:#edca7e
+  color:#edca7e;
 }
 
 .menu{
@@ -71,7 +80,8 @@ nav{
   background:none;
   border:0;
   color:white;
-  font-size:25px
+  font-size:25px;
+  cursor:pointer;
 }
 
 /* Language switch */
@@ -81,7 +91,7 @@ nav{
   align-items:center;
   gap:6px;
   margin-left:15px;
-  white-space:nowrap
+  white-space:nowrap;
 }
 
 .language button{
@@ -91,59 +101,65 @@ nav{
   font-family:inherit;
   font-size:14px;
   cursor:pointer;
-  padding:4px 2px
+  padding:4px 2px;
 }
 
 .language button:hover{
   color:#edca7e;
-  text-decoration:underline
+  text-decoration:underline;
 }
 
 .language span{
-  opacity:.6
+  opacity:.6;
 }
 
-/* Pages */
+/* =========================
+   PAGES
+========================= */
 
 .page{
   min-height:calc(100vh - 60px);
   padding:70px 7%;
   display:flex;
   align-items:center;
-  justify-content:center
+  justify-content:center;
 }
 
 .container{
   width:100%;
   max-width:1120px;
-  text-align:center
+  text-align:center;
 }
 
 .kicker{
   color:var(--saffron);
   letter-spacing:4px;
-  text-transform:uppercase
+  text-transform:uppercase;
 }
 
 .title{
   font-size:clamp(45px,6vw,70px);
   color:var(--maroon);
-  margin:8px 0 20px
+  margin:8px 0 20px;
+  line-height:1.05;
 }
 
 .sub{
   font-size:21px;
   line-height:1.5;
   max-width:700px;
-  margin:0 auto 30px
+  margin:0 auto 30px;
 }
 
-/* Buttons */
+/* =========================
+   BUTTONS
+========================= */
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  min-height:46px;
   padding:12px 22px;
   border-radius:30px;
   border:1px solid var(--gold);
@@ -152,20 +168,23 @@ nav{
   font-size:17px;
   margin:5px;
   cursor:pointer;
-  font-family:inherit
+  font-family:inherit;
+  text-align:center;
 }
 
 .primary{
   background:var(--saffron);
-  color:#fff
+  color:#fff;
 }
 
 .outline{
   color:var(--maroon);
-  background:#fff
+  background:#fff;
 }
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
 
 .hero{
   min-height:calc(100vh - 60px);
@@ -173,75 +192,79 @@ nav{
     linear-gradient(#470f1ec7,#470f1eab),
     url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
     center/cover;
-  color:#fff
+  color:#fff;
 }
 
 .hero .title{
   color:#fff;
   font-size:clamp(58px,10vw,110px);
-  line-height:.9
+  line-height:.9;
 }
 
 .om{
   font-size:48px;
-  color:#e6c278
+  color:#e6c278;
 }
 
 .dev{
-  font-family:"Noto Serif Devanagari"
+  font-family:"Noto Serif Devanagari";
 }
 
 .date{
   font-size:24px;
-  letter-spacing:3px
+  letter-spacing:3px;
 }
 
 .orn{
   width:230px;
   height:1px;
   background:#e3bc6b;
-  margin:25px auto
+  margin:25px auto;
 }
 
-/* Story */
+/* =========================
+   STORY
+========================= */
 
 .grid2{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:35px;
-  align-items:center
+  align-items:center;
 }
 
 .photo{
   border:9px solid white;
-  box-shadow:0 12px 35px #4b102033
+  box-shadow:0 12px 35px #4b102033;
 }
 
 .photo img{
   display:block;
   width:100%;
   height:500px;
-  object-fit:cover
+  object-fit:cover;
 }
 
 .copy{
   text-align:left;
   font-size:20px;
-  line-height:1.55
+  line-height:1.55;
 }
 
 .quote{
   border-left:3px solid var(--gold);
   padding-left:18px;
-  font-style:italic
+  font-style:italic;
 }
 
-/* Event cards */
+/* =========================
+   EVENT CARDS
+========================= */
 
 .cards{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:18px
+  gap:18px;
 }
 
 .card{
@@ -249,17 +272,17 @@ nav{
   border:1px solid #ead6b1;
   border-radius:20px;
   padding:25px 16px;
-  box-shadow:0 8px 25px #4b10200d
+  box-shadow:0 8px 25px #4b10200d;
 }
 
 .icon{
-  font-size:40px
+  font-size:40px;
 }
 
 .card h3{
   font-size:29px;
   color:var(--maroon);
-  margin:8px
+  margin:8px;
 }
 
 .tag{
@@ -267,15 +290,17 @@ nav{
   background:#f5e4cb;
   color:var(--maroon);
   border-radius:20px;
-  padding:4px 10px
+  padding:4px 10px;
 }
 
-/* Gallery */
+/* =========================
+   GALLERY
+========================= */
 
 .gallery{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:15px
+  gap:15px;
 }
 
 .gallery img{
@@ -283,15 +308,13 @@ nav{
   height:250px;
   object-fit:cover;
   border-radius:14px;
-  cursor:pointer
+  cursor:pointer;
 }
-
-/* Video */
 
 .video{
   margin:30px auto 0;
   max-width:780px;
-  height:280px;
+  min-height:280px;
   border-radius:20px;
   background:
     url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85")
@@ -299,7 +322,7 @@ nav{
   display:flex;
   align-items:center;
   justify-content:center;
-  position:relative
+  position:relative;
 }
 
 .play{
@@ -310,7 +333,7 @@ nav{
   background:#fffd;
   color:var(--maroon);
   font-size:28px;
-  cursor:pointer
+  cursor:pointer;
 }
 
 .video span{
@@ -319,34 +342,386 @@ nav{
   left:20px;
   color:#fff;
   font-size:20px;
-  text-shadow:0 2px 5px #000
+  text-shadow:0 2px 5px #000;
 }
 
-/* Venue */
+/* =========================
+   VENUE
+========================= */
 
 .venuegrid{
   display:grid;
   grid-template-columns:1fr 1.2fr;
-  gap:25px
+  gap:25px;
 }
 
 .venuecard{
   background:#fff;
   padding:30px;
   border-radius:20px;
-  text-align:left
+  text-align:left;
 }
 
 .venuecard h3{
   color:var(--maroon);
-  font-size:35px
+  font-size:35px;
+  margin-top:0;
 }
 
 .map{
   width:100%;
   height:390px;
   border:0;
-  border-radius:20px
+  border-radius:20px;
 }
 
-/
+/* =========================
+   RSVP
+========================= */
+
+.rsvp{
+  max-width:650px;
+  margin:auto;
+  background:#fff;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 10px 30px #4b10201a;
+}
+
+.rsvp input,
+.rsvp textarea,
+.rsvp select{
+  width:100%;
+  padding:13px;
+  margin:7px 0 12px;
+  border:1px solid #dcc69d;
+  border-radius:10px;
+  font-family:inherit;
+  font-size:17px;
+}
+
+.rsvp label{
+  text-align:left;
+  display:block;
+  color:var(--maroon);
+}
+
+/* =========================
+   CLEAN FOOTER
+========================= */
+
+footer{
+  background:var(--deep);
+  color:#fff;
+  text-align:center;
+  padding:35px 20px 32px;
+  margin-top:0;
+}
+
+footer .dev{
+  color:#e6c278;
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+footer h2{
+  margin:5px 0;
+  font-size:30px;
+  color:#fff;
+}
+
+footer small{
+  display:block;
+  margin-top:8px;
+  color:#edca7e;
+  font-size:16px;
+}
+
+/* Hide unused old modal */
+.modal{
+  display:none !important;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+  nav{
+    padding:12px 20px;
+  }
+
+  .links{
+    gap:12px;
+  }
+
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .grid2,
+  .venuegrid{
+    grid-template-columns:1fr;
+  }
+
+  .photo img{
+    height:400px;
+  }
+
+}
+
+/* =========================
+   PHONE
+========================= */
+
+@media(max-width:700px){
+
+  nav{
+    min-height:58px;
+    padding:10px 16px;
+    flex-wrap:wrap;
+  }
+
+  .brand{
+    font-size:16px;
+  }
+
+  .menu{
+    display:block;
+    order:2;
+  }
+
+  .links{
+    display:none;
+    position:absolute;
+    top:58px;
+    left:0;
+    right:0;
+    background:var(--deep);
+    padding:18px 20px 22px;
+    flex-direction:column;
+    gap:14px;
+    text-align:center;
+    box-shadow:0 8px 18px #0004;
+  }
+
+  .links.open{
+    display:flex;
+  }
+
+  .links a{
+    font-size:18px;
+    padding:5px;
+  }
+
+  .language{
+    margin:8px auto 0;
+    width:100%;
+    justify-content:center;
+    order:3;
+    padding-top:4px;
+  }
+
+  .language button{
+    font-size:15px;
+  }
+
+  .page{
+    min-height:auto;
+    padding:55px 16px 45px;
+  }
+
+  .container{
+    width:100%;
+  }
+
+  .kicker{
+    font-size:14px;
+    letter-spacing:2px;
+  }
+
+  .title{
+    font-size:clamp(38px,11vw,55px);
+    margin:8px 0 18px;
+  }
+
+  .sub{
+    font-size:18px;
+    line-height:1.45;
+    margin-bottom:25px;
+  }
+
+  .hero{
+    min-height:calc(100vh - 90px);
+    padding:45px 16px;
+  }
+
+  .hero .title{
+    font-size:clamp(55px,17vw,78px);
+    line-height:.92;
+  }
+
+  .om{
+    font-size:40px;
+  }
+
+  .date{
+    font-size:18px;
+    letter-spacing:2px;
+  }
+
+  .orn{
+    width:170px;
+    margin:20px auto;
+  }
+
+  .btn{
+    width:100%;
+    max-width:330px;
+    margin:6px auto;
+    font-size:16px;
+  }
+
+  .grid2,
+  .venuegrid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .photo{
+    border-width:6px;
+  }
+
+  .photo img{
+    height:300px;
+  }
+
+  .copy{
+    text-align:center;
+    font-size:18px;
+  }
+
+  .quote{
+    text-align:left;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .card{
+    padding:22px 18px;
+  }
+
+  .card h3{
+    font-size:27px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .gallery img{
+    height:260px;
+  }
+
+  .video{
+    min-height:220px;
+    margin-top:25px;
+    border-radius:16px;
+  }
+
+  .video span{
+    font-size:17px;
+    left:15px;
+    bottom:14px;
+  }
+
+  .play{
+    width:68px;
+    height:68px;
+  }
+
+  .venuecard{
+    padding:24px 20px;
+    text-align:center;
+  }
+
+  .venuecard h3{
+    font-size:30px;
+  }
+
+  .map{
+    height:300px;
+    border-radius:16px;
+  }
+
+  .rsvp{
+    padding:25px 18px;
+    border-radius:18px;
+  }
+
+  .rsvp input,
+  .rsvp textarea,
+  .rsvp select{
+    font-size:16px;
+  }
+
+  footer{
+    padding:30px 16px;
+  }
+
+  footer .dev{
+    font-size:21px;
+  }
+
+  footer h2{
+    font-size:26px;
+  }
+
+  footer small{
+    font-size:15px;
+  }
+
+}
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media(max-width:380px){
+
+  .brand{
+    font-size:15px;
+  }
+
+  .hero .title{
+    font-size:52px;
+  }
+
+  .date{
+    font-size:16px;
+  }
+
+  .page{
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+  .photo img{
+    height:260px;
+  }
+
+  .gallery img{
+    height:230px;
+  }
+
+  footer{
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+}
