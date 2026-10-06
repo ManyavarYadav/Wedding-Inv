@@ -15,24 +15,33 @@
   <button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
 
   <div class="links">
-    <a href="index.html" class="active">Home / मुख्य पृष्ठ</a>
-    <a href="story.html">Our Story / हमारी कहानी</a>
-    <a href="events.html">Events / कार्यक्रम</a>
-    <a href="gallery.html">Gallery / तस्वीरें</a>
-    <a href="venue.html">Venue & RSVP / स्थान एवं आमंत्रण</a>
+    <a href="index.html" class="active" data-en="Home" data-hi="मुख्य पृष्ठ">Home</a>
+    <a href="story.html" data-en="Our Story" data-hi="हमारी कहानी">Our Story</a>
+    <a href="events.html" data-en="Events" data-hi="कार्यक्रम">Events</a>
+    <a href="gallery.html" data-en="Gallery" data-hi="तस्वीरें">Gallery</a>
+    <a href="venue.html" data-en="Venue & RSVP" data-hi="स्थान एवं आमंत्रण">Venue & RSVP</a>
+  </div>
+
+  <div class="language">
+    <button onclick="setLanguage('en')">English</button>
+    <span>|</span>
+    <button onclick="setLanguage('hi')">हिंदी</button>
   </div>
 </nav>
 
 <main class="page hero">
+
   <div class="container">
 
     <div class="om">ॐ</div>
 
-    <div class="dev">शुभ विवाह</div>
+    <div class="dev" data-en="शुभ विवाह" data-hi="शुभ विवाह">
+      शुभ विवाह
+    </div>
 
-    <p>
-      WITH THE BLESSINGS OF OUR FAMILIES<br>
-      <span class="dev">अपने परिवारों के आशीर्वाद के साथ</span>
+    <p data-en="WITH THE BLESSINGS OF OUR FAMILIES"
+       data-hi="अपने परिवारों के आशीर्वाद के साथ">
+      WITH THE BLESSINGS OF OUR FAMILIES
     </p>
 
     <h1 class="title">
@@ -41,56 +50,107 @@
       Ananya
     </h1>
 
-    <div class="dev">
-      यादव परिवार सादर आमंत्रित करता है
+    <div class="dev"
+         data-en="Yadav Family cordially invites you"
+         data-hi="यादव परिवार सादर आमंत्रित करता है">
+      Yadav Family cordially invites you
     </div>
 
     <div class="orn"></div>
 
     <div class="date">
-      18 DECEMBER 2026<br>
-      <span class="dev">18 दिसंबर 2026</span>
+      <span data-en="18 DECEMBER 2026"
+            data-hi="18 दिसंबर 2026">
+        18 DECEMBER 2026
+      </span>
     </div>
 
     <div style="margin-top:25px">
-      <a class="btn primary" href="story.html">
-        Enter Invitation / आमंत्रण में प्रवेश →
+
+      <a class="btn primary"
+         href="story.html"
+         data-en="Enter Invitation →"
+         data-hi="आमंत्रण में प्रवेश →">
+        Enter Invitation →
       </a>
 
-      <button class="btn outline" onclick="cal()">
-        📅 Save the Date / तारीख सुरक्षित करें
+      <button class="btn outline"
+              onclick="cal()"
+              data-en="📅 Save the Date"
+              data-hi="📅 तारीख सुरक्षित करें">
+        📅 Save the Date
       </button>
+
     </div>
 
   </div>
+
 </main>
 
 <footer>
+
   <div class="dev">ॐ सर्वे भवन्तु सुखिनः</div>
 
   <h2>Aditya & Ananya</h2>
 
-  <small>
-    Yadav Family · यादव परिवार · शुभ विवाह
+  <small
+    data-en="Yadav Family · शुभ विवाह"
+    data-hi="यादव परिवार · शुभ विवाह">
+    Yadav Family · शुभ विवाह
   </small>
+
 </footer>
 
 <div class="modal" id="modal" onclick="closeModal()">
+
   <div class="modalbox" onclick="event.stopPropagation()">
     <button class="close" onclick="closeModal()">×</button>
     <img id="modalImg">
   </div>
+
 </div>
 
 <script>
+
+function setLanguage(lang){
+
+  document.querySelectorAll("[data-en]").forEach(function(element){
+
+    element.textContent =
+      lang === "hi"
+      ? element.getAttribute("data-hi")
+      : element.getAttribute("data-en");
+
+  });
+
+  localStorage.setItem("weddingLanguage", lang);
+}
+
+function loadLanguage(){
+
+  const lang = localStorage.getItem("weddingLanguage") || "en";
+
+  setLanguage(lang);
+
+}
+
 function cal(){
-  let u="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Aditya%20%26%20Ananya%20Wedding&dates=20261218T190000/20261218T230000&location=Shagun%20Banquet%2C%20Ghaziabad";
+
+  let u =
+  "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Aditya%20%26%20Ananya%20Wedding&dates=20261218T190000/20261218T230000&location=Shagun%20Banquet%2C%20Ghaziabad";
+
   open(u,"_blank");
+
 }
 
 function closeModal(){
+
   document.getElementById("modal").classList.remove("open");
+
 }
+
+loadLanguage();
+
 </script>
 
 </body>
